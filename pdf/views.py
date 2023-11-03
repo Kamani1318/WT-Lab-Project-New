@@ -311,5 +311,7 @@ def reward_selection(request):
 
 def first_year(request):
     return render(request, 'first_year.html')
+def second_year(request):
+    return render(request, 'second_year.html')
     
 
