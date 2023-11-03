@@ -313,5 +313,9 @@ def first_year(request):
     return render(request, 'first_year.html')
 def second_year(request):
     return render(request, 'second_year.html')
+def third_year(request):
+    return render(request, 'third_year.html')
+def fourth_year(request):
+    return render(request, 'fourth_year.html')
     
 

@@ -22,7 +22,9 @@ urlpatterns = [
     path('display/<str:success_message>/', views.display_pdf, name='display_pdf_with_message'),  # Add this line
     path('reward_selection/', views.reward_selection, name='reward_selection'),
     path('first/', views.first_year, name='first'),
-    path('second/', views.second_year, name='first'),
+    path('second/', views.second_year, name='second'),
+    path('third/', views.third_year, name='third'),
+    path('fourth/', views.fourth_year, name='fourth'),
     
 
 ]
