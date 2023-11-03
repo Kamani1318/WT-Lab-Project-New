@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voucher Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Your Voucher Code:</h1>
-    <p>{{ voucher_code }}</p>
-    <p>This is your voucher code. Save it for later use.</p>
+<body class="bg-gray-100 h-screen font-sans flex justify-center items-center">
+
+<div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+    <h1 class="mb-6 text-2xl font-bold">Your Voucher Code:</h1>
+    <p class="border border-gray-200 p-4 bg-gray-100 rounded text-center text-xl font-semibold">
+        {{ voucher_code }}
+    </p>
+    <p class="mt-4 text-gray-600">This is your voucher code. Save it for later use.</p>
     
-    <!-- You can include a button or link to redirect to display_be view -->
-    <a href="{% url 'display_be' success_message='Reward claimed successfully' %}">Continue</a>
+    <a href="{% url 'display_be' success_message='Reward claimed successfully' %}" class="mt-6 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue">
+        Continue
+    </a>
+</div>
+
 </body>
 </html>
+
