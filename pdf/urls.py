@@ -2,7 +2,12 @@ from django.urls import path
 from . import views
 from django.conf import settings
 urlpatterns = [
-    path('upload/', views.upload_pdf, name='upload_pdf'),
+    # path('upload/', views.upload_pdf, name='upload_pdf'),
+    path('upload_bme/', views.upload_pdf_bme, name='upload_pdf_bme'),
+    path('upload_maths/', views.upload_pdf_maths, name='upload_pdf_maths'),
+    path('upload_be/', views.upload_pdf_be, name='upload_pdf_be'),
+    path('upload_chem/', views.upload_pdf_chem, name='upload_pdf_chem'),
+    path('upload_mos/', views.upload_pdf_mos, name='upload_pdf_mos'),
     path('display/', views.display_pdf, name='display_pdf'),
     path('display_maths/', views.display_maths, name='display_math'),
     path('display_bme/', views.display_bme, name='display_bme'),

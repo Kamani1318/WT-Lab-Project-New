@@ -4,9 +4,143 @@
 
 
 from django.shortcuts import render, redirect
-from .forms import PDFFileFormbe
+from .forms import PDFFileFormbe,PDFFileFormmaths,PDFFileFormmos,PDFFileFormbme,PDFFileFormchem
 from .models import PDFFilebe,PDFFilebme,PDFFilechem,PDFFilemaths,PDFFilemos, UserPoints
-def upload_pdf(request):
+# def upload_pdf(request):
+#     if request.user.is_authenticated:
+#         print("User is authenticated")
+#         if request.method == 'POST':
+#             form = PDFFileForm(request.POST, request.FILES)
+#             if form.is_valid():
+#                 form.save()
+#                 current_user = request.user
+
+#                 # Check if the UserPoints entry exists for the user, create if not
+#                 user_points, created = UserPoints.objects.get_or_create(user=current_user)
+
+#                 # Award 20 points to the user
+#                 user_points.points += 20
+#                 user_points.save()
+#                 # Redirect to display_pdf page with success message
+#                 return redirect('display_pdf_with_message', success_message="File uploaded successfully")
+#         else:
+#             form = PDFFileForm()
+#         return render(request, 'upload_pdf.html', {'form': form})
+#     else:
+#         print("User is not authenticated")
+#         # Handle case when user is not authenticated
+#         # For instance, redirect to a login page or display an error message
+#         return redirect('authentication:signin')  # Replace 'login_page' with your actual login page name
+    
+def upload_pdf_bme(request):
+    if request.user.is_authenticated:
+        print("User is authenticated")
+        if request.method == 'POST':
+            form = PDFFileFormbme(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                current_user = request.user
+
+                # Check if the UserPoints entry exists for the user, create if not
+                user_points, created = UserPoints.objects.get_or_create(user=current_user)
+
+                # Award 20 points to the user
+                user_points.points += 20
+                user_points.save()
+                # Redirect to display_pdf page with success message
+                return redirect('display_pdf_with_message', success_message="File uploaded successfully")
+        else:
+            form = PDFFileFormbme()
+        return render(request, 'upload_pdf_bme.html', {'form': form})
+    else:
+        print("User is not authenticated")
+        # Handle case when user is not authenticated
+        # For instance, redirect to a login page or display an error message
+        return redirect('authentication:signin')  # Replace 'login_page' with your actual login page name
+
+
+def upload_pdf_chem(request):
+    if request.user.is_authenticated:
+        print("User is authenticated")
+        if request.method == 'POST':
+            form = PDFFileFormchem(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                current_user = request.user
+
+                # Check if the UserPoints entry exists for the user, create if not
+                user_points, created = UserPoints.objects.get_or_create(user=current_user)
+
+                # Award 20 points to the user
+                user_points.points += 20
+                user_points.save()
+                # Redirect to display_pdf page with success message
+                return redirect('display_pdf_with_message', success_message="File uploaded successfully")
+        else:
+            form = PDFFileFormchem()
+        return render(request, 'upload_pdf_chem.html', {'form': form})
+    else:
+        print("User is not authenticated")
+        # Handle case when user is not authenticated
+        # For instance, redirect to a login page or display an error message
+        return redirect('authentication:signin')  # Replace 'login_page' with your actual login page name
+
+
+
+def upload_pdf_maths(request):
+    if request.user.is_authenticated:
+        print("User is authenticated")
+        if request.method == 'POST':
+            form = PDFFileFormmaths(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                current_user = request.user
+
+                # Check if the UserPoints entry exists for the user, create if not
+                user_points, created = UserPoints.objects.get_or_create(user=current_user)
+
+                # Award 20 points to the user
+                user_points.points += 20
+                user_points.save()
+                # Redirect to display_pdf page with success message
+                return redirect('display_pdf_with_message', success_message="File uploaded successfully")
+        else:
+            form = PDFFileFormmaths()
+        return render(request, 'upload_pdf_maths.html', {'form': form})
+    else:
+        print("User is not authenticated")
+        # Handle case when user is not authenticated
+        # For instance, redirect to a login page or display an error message
+        return redirect('authentication:signin')  # Replace 'login_page' with your actual login page name
+
+
+def upload_pdf_mos(request):
+    if request.user.is_authenticated:
+        print("User is authenticated")
+        if request.method == 'POST':
+            form = PDFFileFormmos(request.POST, request.FILES)
+            if form.is_valid():
+                form.save()
+                current_user = request.user
+
+                # Check if the UserPoints entry exists for the user, create if not
+                user_points, created = UserPoints.objects.get_or_create(user=current_user)
+
+                # Award 20 points to the user
+                user_points.points += 20
+                user_points.save()
+                # Redirect to display_pdf page with success message
+                return redirect('display_pdf_with_message', success_message="File uploaded successfully")
+        else:
+            form = PDFFileFormmos()
+        return render(request, 'upload_pdf_mos.html', {'form': form})
+    else:
+        print("User is not authenticated")
+        # Handle case when user is not authenticated
+        # For instance, redirect to a login page or display an error message
+        return redirect('authentication:signin')  # Replace 'login_page' with your actual login page name
+    
+def upload_pdf_be(request):
     if request.user.is_authenticated:
         print("User is authenticated")
         if request.method == 'POST':
@@ -25,7 +159,7 @@ def upload_pdf(request):
                 return redirect('display_pdf_with_message', success_message="File uploaded successfully")
         else:
             form = PDFFileFormbe()
-        return render(request, 'upload_pdf.html', {'form': form})
+        return render(request, 'upload_pdf_be.html', {'form': form})
     else:
         print("User is not authenticated")
         # Handle case when user is not authenticated
