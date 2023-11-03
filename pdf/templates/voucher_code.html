@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voucher Code</title>
+</head>
+<body>
+    <h1>Your Voucher Code:</h1>
+    <p>{{ voucher_code }}</p>
+    <p>This is your voucher code. Save it for later use.</p>
+    
+    <!-- You can include a button or link to redirect to display_be view -->
+    <a href="{% url 'display_be' success_message='Reward claimed successfully' %}">Continue</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload PDF</title>
+</head>
+<body>
+    <h1>Upload PDF File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload PDF</button>
+    </form>
+
+    <!-- Button to go back to the Display PDF page -->
+    <a href="{% url 'display_pdf' %}">
+        <button>Back to Display PDF</button>
+    </a>
+</body>
+</html>
